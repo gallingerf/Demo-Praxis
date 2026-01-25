@@ -55,8 +55,13 @@
     <div class="bg-medical-900 text-white text-sm py-2 hidden md:block">
         <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
             <div class="flex space-x-6">
-                <span><i class="fa-solid fa-phone mr-2 text-medical-500"></i> 02221 60 60 006</span>
-                <span><i class="fa-solid fa-envelope mr-2 text-medical-500"></i> info@praxis-stadtpark-koeln.de</span>
+                <!-- Links für Telefon und Mail -->
+                <a href="tel:022216060006" class="hover:text-medical-200 transition-colors flex items-center">
+                    <i class="fa-solid fa-phone mr-2 text-medical-500"></i> 02221 60 60 006
+                </a>
+                <a href="mailto:info@praxis-stadtpark-koeln.de" class="hover:text-medical-200 transition-colors flex items-center">
+                    <i class="fa-solid fa-envelope mr-2 text-medical-500"></i> info@praxis-stadtpark-koeln.de
+                </a>
             </div>
             <div class="flex space-x-4">
                 <span><i class="fa-regular fa-clock mr-2 text-medical-500"></i> Mo-Fr: 08:00 - 12:00</span>
@@ -144,8 +149,8 @@
             </div>
         </div>
         <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-            <!-- Bild angepasst: Mehr "Grün/Teal" Töne im Bild wenn möglich, hier neutraler Arzt -->
-            <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=2080&auto=format&fit=crop" alt="Arzt in OP-Kleidung">
+            <!-- NEUES BILD: Sehr heller, abstrakter Wartebereich/Flur (Safe bet) -->
+            <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2053&auto=format&fit=crop" alt="Heller Wartebereich Praxis">
         </div>
     </section>
 
@@ -224,7 +229,8 @@
                 <!-- Arzt 2 -->
                 <div class="space-y-4 group">
                     <div class="aspect-w-3 aspect-h-2 rounded-lg overflow-hidden bg-medical-50 shadow-md border border-medical-100">
-                        <img class="object-cover w-full h-64 group-hover:scale-105 transition-transform duration-500" src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=2070&auto=format&fit=crop" alt="Dr. med. Thomas Weber">
+                        <!-- NEUES BILD: Dr. Weber (Freundlicher Arzt, grauer Hintergrund) -->
+                        <img class="object-cover w-full h-64 group-hover:scale-105 transition-transform duration-500" src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=2000&auto=format&fit=crop" alt="Dr. med. Thomas Weber">
                     </div>
                     <div class="space-y-2 text-center">
                         <div class="text-lg leading-6 font-medium space-y-1">
@@ -267,8 +273,17 @@
                 <p class="mb-2">Aachener Straße 500</p>
                 <p class="mb-4">50933 Köln</p>
                 
-                <p class="mb-2 flex items-center"><i class="fa-solid fa-phone w-6 text-medical-400"></i> 02221 60 60 006</p>
-                <p class="flex items-center"><i class="fa-solid fa-envelope w-6 text-medical-400"></i> info@praxis-stadtpark-koeln.de</p>
+                <!-- Links für Telefon und Mail auch im Footer -->
+                <p class="mb-2 flex items-center">
+                    <a href="tel:022216060006" class="flex items-center hover:text-white transition-colors">
+                        <i class="fa-solid fa-phone w-6 text-medical-400"></i> 02221 60 60 006
+                    </a>
+                </p>
+                <p class="flex items-center">
+                    <a href="mailto:info@praxis-stadtpark-koeln.de" class="flex items-center hover:text-white transition-colors">
+                        <i class="fa-solid fa-envelope w-6 text-medical-400"></i> info@praxis-stadtpark-koeln.de
+                    </a>
+                </p>
             </div>
 
             <!-- Öffnungszeiten -->
