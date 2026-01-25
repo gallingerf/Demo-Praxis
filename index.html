@@ -58,7 +58,7 @@
         }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-700 antialiased">
+<body class="bg-slate-50 text-slate-700 antialiased relative">
 
     <!-- TOP BAR (Kontakt & Zeiten) -->
     <div class="bg-medical-900 text-white text-sm py-2 hidden md:block">
@@ -151,16 +151,10 @@
                             Wir verbinden klassische Schulmedizin mit moderner Diagnostik. Als Hausarztpraxis in Köln stehen wir für kurze Wartezeiten und persönliche Betreuung.
                         </p>
                         
-                        <!-- Vereinfachter CTA Bereich -->
-                        <div class="mt-8 sm:mt-10 sm:flex sm:justify-center lg:justify-start">
-                            <div class="rounded-md shadow">
-                                <a href="javascript:void(0)" onclick="scrollToId('online-rezeption')" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-medical-600 hover:bg-medical-700 md:py-4 md:text-lg transition-all cursor-pointer">
-                                    <i class="fa-solid fa-arrow-down mr-3 animate-bounce"></i> Jetzt Anliegen online klären
-                                </a>
-                            </div>
-                        </div>
-                        <p class="mt-3 text-xs text-slate-400 sm:mx-auto lg:mx-0 max-w-md">
-                            Termine, Rezepte & Überweisungen direkt über unseren digitalen Assistenten.
+                        <!-- CTA Bereich entfernt -->
+                        
+                        <p class="mt-6 text-xs text-slate-400 sm:mx-auto lg:mx-0 max-w-md">
+                            Termine, Rezepte & Überweisungen direkt über unsere Online Rezeption.
                         </p>
                     </div>
                 </main>
@@ -178,9 +172,9 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-10">
                 <span class="bg-white text-medical-600 px-4 py-1 rounded-full text-sm font-semibold shadow-sm border border-medical-100">24/7 Erreichbarkeit</span>
-                <h2 class="mt-4 text-3xl font-extrabold text-medical-900">Digitale Rezeption & Telefon-KI</h2>
+                <h2 class="mt-4 text-3xl font-extrabold text-medical-900">Digitale Rezeption & KI Telefon Rezeption</h2>
                 <p class="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">
-                    Wir sind rund um die Uhr für Sie da. Nutzen Sie unseren Chatbot oder sprechen Sie direkt mit unserem KI-Telefonassistenten.
+                    Wir sind rund um die Uhr für Sie da. Nutzen Sie unsere Online Rezeption oder sprechen Sie direkt mit unserer KI Telefon Rezeption.
                 </p>
             </div>
 
@@ -188,18 +182,18 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                 
                 <!-- Kachel 1: Web Assistent -->
-                <div class="bg-white rounded-2xl shadow-lg border border-medical-100 p-8 text-center hover:shadow-xl transition-shadow relative overflow-hidden group">
+                <div class="bg-white rounded-2xl shadow-lg border border-medical-100 p-8 text-center hover:shadow-xl transition-all hover:-translate-y-1 relative overflow-hidden group">
                     <div class="absolute top-0 left-0 w-full h-2 bg-medical-500"></div>
-                    <div class="w-16 h-16 bg-medical-50 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-comment-medical text-3xl text-medical-600"></i>
+                    <div class="w-16 h-16 bg-medical-50 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-medical-500 transition-colors duration-300">
+                        <i class="fa-solid fa-comment-medical text-3xl text-medical-600 group-hover:text-white transition-colors"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-800 mb-3">Online Assistent</h3>
+                    <h3 class="text-xl font-bold text-slate-800 mb-3 group-hover:text-medical-600 transition-colors">Online Rezeption</h3>
                     <p class="text-slate-600 mb-6 leading-relaxed">
-                        Nutzen Sie das Chat-Widget (unten rechts auf dieser Seite), um Termine zu vereinbaren oder Rezepte zu bestellen.
+                        Nutzen Sie die Online Rezeption (unten rechts auf dieser Seite), um Termine zu vereinbaren oder Rezepte zu bestellen.
                     </p>
-                    <div class="inline-block px-4 py-2 bg-medical-50 text-medical-700 rounded-lg text-sm font-medium">
-                        <i class="fa-solid fa-circle text-green-500 text-[10px] mr-2"></i>Jetzt online
-                    </div>
+                    <button onclick="window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'})" class="inline-flex items-center px-6 py-3 bg-medical-600 hover:bg-medical-700 text-white font-bold rounded-lg transition-colors">
+                        <i class="fa-solid fa-arrow-down mr-2 animate-bounce"></i> Zur Online Rezeption
+                    </button>
                 </div>
 
                 <!-- Kachel 2: Telefon KI -->
@@ -208,9 +202,9 @@
                     <div class="w-16 h-16 bg-accent-light rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
                         <i class="fa-solid fa-phone-volume text-3xl text-accent-main"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-800 mb-3">KI-Telefonassistent</h3>
+                    <h3 class="text-xl font-bold text-slate-800 mb-3">KI Telefon Rezeption</h3>
                     <p class="text-slate-600 mb-6 leading-relaxed">
-                        Keine Warteschleife. Unser intelligenter Telefon-Bot nimmt Ihr Anliegen jederzeit persönlich entgegen.
+                        Keine Warteschleife. Unsere intelligente KI Telefon Rezeption nimmt Ihr Anliegen jederzeit persönlich entgegen.
                     </p>
                     <a href="tel:022216060006" class="inline-flex items-center px-6 py-3 bg-medical-600 hover:bg-medical-700 text-white font-bold rounded-lg transition-colors">
                         <i class="fa-solid fa-phone mr-2"></i> 02221 60 60 006
@@ -219,7 +213,7 @@
 
             </div>
             
-            <p class="mt-8 text-center text-xs text-slate-400 font-mono">[Powered by Meditech-AI]</p>
+            <!-- "Powered by" Text wurde entfernt -->
         </div>
     </section>
 
@@ -339,17 +333,14 @@
                 </div>
             </div>
             
-            <div class="mt-10 text-center">
-                <a href="javascript:void(0)" onclick="scrollToId('online-rezeption')" class="inline-flex items-center text-medical-600 hover:text-medical-800 font-semibold transition-colors cursor-pointer">
-                    Detaillierte Auskunft erhalten Sie über unseren Chatbot <i class="fa-solid fa-arrow-right ml-2"></i>
-                </a>
-            </div>
+            <!-- Link zur detaillierten Auskunft wurde entfernt -->
         </div>
     </section>
 
-    <!-- FOOTER / KONTAKT -->
+    <!-- FOOTER / KONTAKT (ANGAPASSTES GRID) -->
+    <!-- Jetzt mit md:grid-cols-4, damit rechts eine leere Spalte für das Widget bleibt -->
     <footer id="kontakt" class="bg-medical-900 text-medical-100">
-        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
             
             <div>
                 <h3 class="text-white text-lg font-bold mb-4 border-b border-medical-700 pb-2 inline-block">Kontakt</h3>
@@ -378,9 +369,6 @@
                     <li class="flex justify-between border-b border-medical-800 pb-1"><span>Donnerstag</span> <span>08:00 - 12:00 | 15:00 - 19:00</span></li>
                     <li class="flex justify-between border-b border-medical-800 pb-1"><span>Freitag</span> <span>08:00 - 13:00</span></li>
                 </ul>
-                <p class="mt-4 text-xs text-medical-300 bg-medical-800 p-2 rounded">
-                    <i class="fa-solid fa-info-circle mr-1"></i> Nutzen Sie unsere Online-Rezeption für Terminvereinbarungen rund um die Uhr.
-                </p>
             </div>
 
             <div>
@@ -397,6 +385,12 @@
                         Powered by <a href="https://gallinger.it" target="_blank" class="text-white hover:underline hover:text-medical-200 transition-colors">Gallinger IT</a>
                     </p>
                 </div>
+            </div>
+
+            <!-- 4. SPALTE für das schwebende Chat-Widget -->
+            <div class="hidden md:block">
+                 <h3 class="text-white text-lg font-bold mb-4 border-b border-medical-700 pb-2 inline-block">Online-Rezeption</h3>
+                 <!-- Leerraum für Widget -->
             </div>
         </div>
     </footer>
@@ -420,25 +414,17 @@
             }
 
             // Menü schließen (falls mobil offen)
-            toggleMenu();
+            const menu = document.getElementById('mobile-menu');
+            if (menu && !menu.classList.contains('hidden')) {
+                menu.classList.add('hidden');
+            }
         }
 
-        // Mobile Menu Toggle Funktion
+        // Mobile Menu Toggle Funktion (KORRIGIERT)
         function toggleMenu() {
             const menu = document.getElementById('mobile-menu');
-            if (!menu.classList.contains('hidden')) {
-                menu.classList.add('hidden');
-            }
-        }
-        
-        // Öffnet das Menü (für den Hamburger Button)
-        function openMenu() {
-             const menu = document.getElementById('mobile-menu');
-             if (menu.classList.contains('hidden')) {
-                menu.classList.remove('hidden');
-            } else {
-                menu.classList.add('hidden');
-            }
+            // Einfach toggeln statt nur adden
+            menu.classList.toggle('hidden');
         }
     </script>
     
