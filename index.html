@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praxis am Stadtpark | Dr. Weber & Kollegen - Köln</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts (Lato) -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Lato', 'sans-serif'],
+                    },
+                    colors: {
+                        medical: {
+                            // OP-Kittel Grün (Teal/Emerald Mischung)
+                            50: '#f0fdfa', // Sehr helles Mint
+                            100: '#ccfbf1',
+                            500: '#14b8a6', // Haupt-Teal
+                            600: '#0d9488', // Dunkleres Teal für Buttons
+                            700: '#0f766e',
+                            800: '#115e59',
+                            900: '#134e4a', // Sehr dunkel für Footer
+                        },
+                        accent: {
+                            light: '#ecfccb', // Helles Limettengrün als Akzent
+                            main: '#84cc16',  // Frisches Grün
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .hero-pattern {
+            background-color: #ffffff;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%230d9488' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-700 antialiased">
+
+    <!-- TOP BAR (Kontakt & Zeiten) -->
+    <div class="bg-medical-900 text-white text-sm py-2 hidden md:block">
+        <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+            <div class="flex space-x-6">
+                <span><i class="fa-solid fa-phone mr-2 text-medical-500"></i> 02221 60 60 006</span>
+                <span><i class="fa-solid fa-envelope mr-2 text-medical-500"></i> info@praxis-stadtpark-koeln.de</span>
+            </div>
+            <div class="flex space-x-4">
+                <span><i class="fa-regular fa-clock mr-2 text-medical-500"></i> Mo-Fr: 08:00 - 12:00</span>
+                <span class="text-medical-100">|</span>
+                <span>Mo, Di, Do: 15:00 - 18:00</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav class="bg-white shadow-md sticky top-0 z-50 border-t-4 border-medical-600">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <!-- Logo Bereich -->
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center gap-3">
+                        <!-- Icon angepasst auf Medical Green -->
+                        <div class="w-10 h-10 bg-medical-50 rounded-full flex items-center justify-center text-medical-700 border border-medical-200">
+                            <i class="fa-solid fa-staff-snake text-xl"></i>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="font-bold text-xl text-slate-800 leading-tight">Praxis am Stadtpark</span>
+                            <span class="text-xs text-medical-700 font-semibold uppercase tracking-wide">Köln-Lindenthal</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#" class="text-slate-600 hover:text-medical-600 font-medium transition-colors">Startseite</a>
+                    <a href="#team" class="text-slate-600 hover:text-medical-600 font-medium transition-colors">Unser Team</a>
+                    <a href="#leistungen" class="text-slate-600 hover:text-medical-600 font-medium transition-colors">Leistungen</a>
+                    <!-- Highlight Button -->
+                    <a href="#online-rezeption" class="px-6 py-2.5 bg-medical-600 hover:bg-medical-700 text-white font-bold rounded-lg shadow-md shadow-medical-500/20 transition-all transform hover:-translate-y-0.5 border border-transparent">
+                        <i class="fa-solid fa-robot mr-2"></i> Online Rezeption
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button class="text-slate-600 hover:text-medical-600 focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="relative bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
+                <!-- Diagonaler Schnitt Hintergrund -->
+                <svg class="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2" fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                    <polygon points="50,0 100,0 50,100 0,100" />
+                </svg>
+
+                <main class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
+                    <div class="sm:text-center lg:text-left">
+                        <div class="inline-flex items-center px-3 py-1 rounded-full bg-medical-50 border border-medical-100 text-medical-700 text-xs font-semibold uppercase tracking-wide mb-4">
+                            <span class="w-2 h-2 rounded-full bg-medical-500 mr-2 animate-pulse"></span>
+                            Jetzt neu in Köln
+                        </div>
+                        <h1 class="text-4xl tracking-tight font-extrabold text-slate-900 sm:text-5xl md:text-6xl">
+                            <span class="block xl:inline">Ganzheitliche Medizin</span>
+                            <span class="block text-medical-600 xl:inline">für Ihre Gesundheit.</span>
+                        </h1>
+                        <p class="mt-3 text-base text-slate-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+                            Wir verbinden klassische Schulmedizin mit moderner Diagnostik. Als Hausarztpraxis in Köln stehen wir für kurze Wartezeiten und persönliche Betreuung.
+                        </p>
+                        
+                        <!-- Vereinfachter CTA Bereich -->
+                        <div class="mt-8 sm:mt-10 sm:flex sm:justify-center lg:justify-start">
+                            <div class="rounded-md shadow">
+                                <a href="#online-rezeption" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-medical-600 hover:bg-medical-700 md:py-4 md:text-lg transition-all">
+                                    <i class="fa-solid fa-arrow-down mr-3 animate-bounce"></i> Jetzt Anliegen online klären
+                                </a>
+                            </div>
+                        </div>
+                        <p class="mt-3 text-xs text-slate-400 sm:mx-auto lg:mx-0 max-w-md">
+                            Termine, Rezepte & Überweisungen direkt über unseren digitalen Assistenten.
+                        </p>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+            <!-- Bild angepasst: Mehr "Grün/Teal" Töne im Bild wenn möglich, hier neutraler Arzt -->
+            <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=2080&auto=format&fit=crop" alt="Arzt in OP-Kleidung">
+        </div>
+    </section>
+
+    <!-- !!! KERN-FEATURE: ONLINE REZEPTION (IFRAME) !!! -->
+    <section id="online-rezeption" class="py-16 bg-medical-50 border-y border-medical-100 relative">
+        <!-- Dekorative Elemente -->
+        <div class="absolute top-0 left-0 w-full h-full hero-pattern opacity-30 pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-10">
+                <h2 class="mt-4 text-3xl font-extrabold text-medical-900">Online-Rezeption</h2>
+                <p class="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">
+                    Unser digitaler Assistent nimmt Ihr Anliegen sofort entgegen. 
+                    <br><span class="text-medical-600 font-semibold">Kein Telefon, keine Wartezeit.</span>
+                </p>
+                <!-- Hinweis für den User (IT Dienstleister) -->
+                <p class="mt-2 text-xs text-slate-400 font-mono">[Demo-Integration von meditech-ai.de]</p>
+            </div>
+
+            <!-- IFRAME CONTAINER -->
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-medical-200 h-[650px] relative max-w-4xl mx-auto">
+                <!-- Loading Spinner / Fallback -->
+                <div class="absolute inset-0 flex items-center justify-center bg-slate-50 -z-10">
+                    <div class="text-center">
+                        <i class="fa-solid fa-circle-notch fa-spin text-3xl text-medical-300 mb-3"></i>
+                        <p class="text-medical-600 font-medium">Lade Meditech-AI...</p>
+                    </div>
+                </div>
+                
+                <!-- Hier wird der meditech-ai iframe eingebunden -->
+                <iframe 
+                    src="https://meditech-ai.de" 
+                    title="Meditech AI Online Rezeption"
+                    class="w-full h-full border-0"
+                    allow="microphone"
+                ></iframe>
+            </div>
+            
+            <div class="mt-8 flex justify-center flex-wrap gap-6 text-sm text-slate-500">
+                <div class="flex items-center px-4 py-2 bg-white rounded-full shadow-sm border border-medical-100">
+                    <i class="fa-solid fa-shield-halved text-medical-500 mr-2"></i> Sichere Datenübertragung
+                </div>
+                <div class="flex items-center px-4 py-2 bg-white rounded-full shadow-sm border border-medical-100">
+                    <i class="fa-solid fa-clock text-medical-500 mr-2"></i> 24/7 Erreichbar
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEAM SECTION -->
+    <section id="team" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold text-slate-900">Ihr Ärzteteam</h2>
+                <div class="w-20 h-1 bg-medical-500 mx-auto mt-4 rounded-full"></div>
+                <p class="mt-4 text-lg text-slate-500">Kompetenz in Köln-Lindenthal.</p>
+            </div>
+
+            <div class="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-8">
+                <!-- Arzt 1 -->
+                <div class="space-y-4 group">
+                    <div class="aspect-w-3 aspect-h-2 rounded-lg overflow-hidden bg-medical-50 shadow-md border border-medical-100">
+                        <img class="object-cover w-full h-64 group-hover:scale-105 transition-transform duration-500" src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=2070&auto=format&fit=crop" alt="Dr. med. Julia Sommer">
+                    </div>
+                    <div class="space-y-2 text-center">
+                        <div class="text-lg leading-6 font-medium space-y-1">
+                            <h3 class="text-medical-900 font-bold">Dr. med. Julia Sommer</h3>
+                            <p class="text-medical-600 font-medium">Allgemeinmedizin</p>
+                        </div>
+                        <div class="text-sm text-slate-500 px-4">
+                            Spezialisiert auf Präventionsmedizin und psychosomatische Grundversorgung.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Arzt 2 -->
+                <div class="space-y-4 group">
+                    <div class="aspect-w-3 aspect-h-2 rounded-lg overflow-hidden bg-medical-50 shadow-md border border-medical-100">
+                        <img class="object-cover w-full h-64 group-hover:scale-105 transition-transform duration-500" src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=2070&auto=format&fit=crop" alt="Dr. med. Thomas Weber">
+                    </div>
+                    <div class="space-y-2 text-center">
+                        <div class="text-lg leading-6 font-medium space-y-1">
+                            <h3 class="text-medical-900 font-bold">Dr. med. Thomas Weber</h3>
+                            <p class="text-medical-600 font-medium">Facharzt für Innere Medizin</p>
+                        </div>
+                        <div class="text-sm text-slate-500 px-4">
+                            Ihr Ansprechpartner für Kardiologie, Ultraschall-Diagnostik und Diabetes.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Arzt 3 -->
+                <div class="space-y-4 group">
+                    <div class="aspect-w-3 aspect-h-2 rounded-lg overflow-hidden bg-medical-50 shadow-md border border-medical-100">
+                        <img class="object-cover w-full h-64 group-hover:scale-105 transition-transform duration-500" src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?q=80&w=2128&auto=format&fit=crop" alt="Dr. med. Sarah Kavi">
+                    </div>
+                    <div class="space-y-2 text-center">
+                        <div class="text-lg leading-6 font-medium space-y-1">
+                            <h3 class="text-medical-900 font-bold">Dr. med. Sarah Kavi</h3>
+                            <p class="text-medical-600 font-medium">Allgemeinmedizin & Chirotherapie</p>
+                        </div>
+                        <div class="text-sm text-slate-500 px-4">
+                            Schwerpunkte in der manuellen Medizin und Reisemedizinischen Beratung.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER / KONTAKT -->
+    <footer id="kontakt" class="bg-medical-900 text-medical-100">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <!-- Kontakt -->
+            <div>
+                <h3 class="text-white text-lg font-bold mb-4 border-b border-medical-700 pb-2 inline-block">Kontakt</h3>
+                <p class="mb-2 font-semibold text-white">Praxis am Stadtpark</p>
+                <p class="mb-2">Aachener Straße 500</p>
+                <p class="mb-4">50933 Köln</p>
+                
+                <p class="mb-2 flex items-center"><i class="fa-solid fa-phone w-6 text-medical-400"></i> 02221 60 60 006</p>
+                <p class="flex items-center"><i class="fa-solid fa-envelope w-6 text-medical-400"></i> info@praxis-stadtpark-koeln.de</p>
+            </div>
+
+            <!-- Öffnungszeiten -->
+            <div>
+                <h3 class="text-white text-lg font-bold mb-4 border-b border-medical-700 pb-2 inline-block">Sprechzeiten</h3>
+                <ul class="space-y-2 text-sm">
+                    <li class="flex justify-between border-b border-medical-800 pb-1"><span>Montag</span> <span>08:00 - 12:00 | 15:00 - 18:00</span></li>
+                    <li class="flex justify-between border-b border-medical-800 pb-1"><span>Dienstag</span> <span>08:00 - 12:00 | 15:00 - 18:00</span></li>
+                    <li class="flex justify-between border-b border-medical-800 pb-1"><span>Mittwoch</span> <span>08:00 - 13:00</span></li>
+                    <li class="flex justify-between border-b border-medical-800 pb-1"><span>Donnerstag</span> <span>08:00 - 12:00 | 15:00 - 19:00</span></li>
+                    <li class="flex justify-between"><span>Freitag</span> <span>08:00 - 13:00</span></li>
+                </ul>
+                <p class="mt-4 text-xs text-medical-300 bg-medical-800 p-2 rounded">
+                    <i class="fa-solid fa-info-circle mr-1"></i> Nutzen Sie unsere Online-Rezeption für Terminvereinbarungen rund um die Uhr.
+                </p>
+            </div>
+
+            <!-- IT Hinweis / Map Placeholder -->
+            <div>
+                <h3 class="text-white text-lg font-bold mb-4 border-b border-medical-700 pb-2 inline-block">Anfahrt</h3>
+                <div class="bg-medical-800 h-32 w-full rounded-lg flex items-center justify-center border border-medical-700 group cursor-pointer hover:bg-medical-700 transition-colors">
+                    <div class="text-center">
+                        <i class="fa-solid fa-map-location-dot text-2xl text-medical-400 mb-2 group-hover:text-white transition-colors"></i><br>
+                        <span class="text-medical-300 text-sm group-hover:text-white">Karte laden (Demo)</span>
+                    </div>
+                </div>
+                <div class="mt-6 border-t border-medical-800 pt-4">
+                    <p class="text-xs text-medical-400">
+                        Diese Webseite ist eine Technologiedemonstration.<br>
+                        Powered by <a href="https://gallinger.it" target="_blank" class="text-white hover:underline hover:text-medical-200 transition-colors">Gallinger IT</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
