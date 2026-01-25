@@ -44,11 +44,17 @@
     <style>
         .hero-pattern {
             background-color: #ffffff;
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%230d9488' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%230d9488' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         }
-        /* Smooth Scroll im CSS deaktiviert, da wir es jetzt per JS steuern */
+        
+        /* WICHTIG: Definiert den Scroll-Abstand für alle Sections, 
+           damit die Überschrift nicht unter dem fixierten Menü verschwindet */
+        section {
+            scroll-margin-top: 100px;
+        }
+        
         html {
-            scroll-behavior: auto;
+            scroll-behavior: smooth;
         }
     </style>
 </head>
@@ -78,7 +84,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20">
                 <!-- Logo Bereich -->
-                <div class="flex items-center cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                <div class="flex items-center cursor-pointer" onclick="scrollToId('top')">
                     <div class="flex-shrink-0 flex items-center gap-3">
                         <div class="w-10 h-10 bg-medical-50 rounded-full flex items-center justify-center text-medical-700 border border-medical-200">
                             <i class="fa-solid fa-staff-snake text-xl"></i>
@@ -92,11 +98,11 @@
                 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-8 items-center">
-                    <a href="#" onclick="smoothScroll(event, 'top')" class="text-slate-600 hover:text-medical-600 font-medium transition-colors">Startseite</a>
-                    <a href="#team" onclick="smoothScroll(event, 'team')" class="text-slate-600 hover:text-medical-600 font-medium transition-colors">Unser Team</a>
-                    <a href="#leistungen" onclick="smoothScroll(event, 'leistungen')" class="text-slate-600 hover:text-medical-600 font-medium transition-colors">Leistungen</a>
+                    <a href="javascript:void(0)" onclick="scrollToId('top')" class="text-slate-600 hover:text-medical-600 font-medium transition-colors">Startseite</a>
+                    <a href="javascript:void(0)" onclick="scrollToId('team')" class="text-slate-600 hover:text-medical-600 font-medium transition-colors">Unser Team</a>
+                    <a href="javascript:void(0)" onclick="scrollToId('leistungen')" class="text-slate-600 hover:text-medical-600 font-medium transition-colors">Leistungen</a>
                     <!-- Highlight Button -->
-                    <a href="#online-rezeption" onclick="smoothScroll(event, 'online-rezeption')" class="px-6 py-2.5 bg-medical-600 hover:bg-medical-700 text-white font-bold rounded-lg shadow-md shadow-medical-500/20 transition-all transform hover:-translate-y-0.5 border border-transparent cursor-pointer">
+                    <a href="javascript:void(0)" onclick="scrollToId('online-rezeption')" class="px-6 py-2.5 bg-medical-600 hover:bg-medical-700 text-white font-bold rounded-lg shadow-md shadow-medical-500/20 transition-all transform hover:-translate-y-0.5 border border-transparent cursor-pointer">
                         <i class="fa-solid fa-robot mr-2"></i> Online Rezeption
                     </a>
                 </div>
@@ -113,10 +119,10 @@
         <!-- Mobile Menu Dropdown -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 shadow-lg absolute w-full left-0 top-20 z-40">
             <div class="px-4 pt-4 pb-6 space-y-3 flex flex-col">
-                <a href="#" class="block px-4 py-3 text-base font-medium text-slate-700 hover:text-medical-600 hover:bg-medical-50 rounded-lg transition-colors" onclick="smoothScroll(event, 'top')">Startseite</a>
-                <a href="#team" class="block px-4 py-3 text-base font-medium text-slate-700 hover:text-medical-600 hover:bg-medical-50 rounded-lg transition-colors" onclick="smoothScroll(event, 'team')">Unser Team</a>
-                <a href="#leistungen" class="block px-4 py-3 text-base font-medium text-slate-700 hover:text-medical-600 hover:bg-medical-50 rounded-lg transition-colors" onclick="smoothScroll(event, 'leistungen')">Leistungen</a>
-                <a href="#online-rezeption" class="block px-4 py-3 text-base font-bold text-white bg-medical-600 hover:bg-medical-700 rounded-lg shadow-sm transition-colors text-center mt-2" onclick="smoothScroll(event, 'online-rezeption')">
+                <a href="javascript:void(0)" class="block px-4 py-3 text-base font-medium text-slate-700 hover:text-medical-600 hover:bg-medical-50 rounded-lg transition-colors" onclick="scrollToId('top')">Startseite</a>
+                <a href="javascript:void(0)" class="block px-4 py-3 text-base font-medium text-slate-700 hover:text-medical-600 hover:bg-medical-50 rounded-lg transition-colors" onclick="scrollToId('team')">Unser Team</a>
+                <a href="javascript:void(0)" class="block px-4 py-3 text-base font-medium text-slate-700 hover:text-medical-600 hover:bg-medical-50 rounded-lg transition-colors" onclick="scrollToId('leistungen')">Leistungen</a>
+                <a href="javascript:void(0)" class="block px-4 py-3 text-base font-bold text-white bg-medical-600 hover:bg-medical-700 rounded-lg shadow-sm transition-colors text-center mt-2" onclick="scrollToId('online-rezeption')">
                     <i class="fa-solid fa-robot mr-2"></i> Online Rezeption
                 </a>
             </div>
@@ -148,7 +154,7 @@
                         <!-- Vereinfachter CTA Bereich -->
                         <div class="mt-8 sm:mt-10 sm:flex sm:justify-center lg:justify-start">
                             <div class="rounded-md shadow">
-                                <a href="#online-rezeption" onclick="smoothScroll(event, 'online-rezeption')" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-medical-600 hover:bg-medical-700 md:py-4 md:text-lg transition-all cursor-pointer">
+                                <a href="javascript:void(0)" onclick="scrollToId('online-rezeption')" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-medical-600 hover:bg-medical-700 md:py-4 md:text-lg transition-all cursor-pointer">
                                     <i class="fa-solid fa-arrow-down mr-3 animate-bounce"></i> Jetzt Anliegen online klären
                                 </a>
                             </div>
@@ -165,44 +171,55 @@
         </div>
     </section>
 
-    <!-- KERN-FEATURE: ONLINE REZEPTION -->
+    <!-- KERN-FEATURE: ONLINE REZEPTION (NEU DESIGNT) -->
     <section id="online-rezeption" class="py-16 bg-medical-50 border-y border-medical-100 relative">
         <div class="absolute top-0 left-0 w-full h-full hero-pattern opacity-30 pointer-events-none"></div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-10">
-                <h2 class="mt-4 text-3xl font-extrabold text-medical-900">Online-Rezeption</h2>
+                <span class="bg-white text-medical-600 px-4 py-1 rounded-full text-sm font-semibold shadow-sm border border-medical-100">24/7 Erreichbarkeit</span>
+                <h2 class="mt-4 text-3xl font-extrabold text-medical-900">Digitale Rezeption & Telefon-KI</h2>
                 <p class="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">
-                    Unser digitaler Assistent nimmt Ihr Anliegen sofort entgegen. 
-                    <br><span class="text-medical-600 font-semibold">Kein Telefon, keine Wartezeit.</span>
+                    Wir sind rund um die Uhr für Sie da. Nutzen Sie unseren Chatbot oder sprechen Sie direkt mit unserem KI-Telefonassistenten.
                 </p>
-                <p class="mt-2 text-xs text-slate-400 font-mono">[Demo-Integration von meditech-ai.de]</p>
             </div>
 
-            <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-medical-200 h-[650px] relative max-w-4xl mx-auto">
-                <div class="absolute inset-0 flex items-center justify-center bg-slate-50 -z-10">
-                    <div class="text-center">
-                        <i class="fa-solid fa-circle-notch fa-spin text-3xl text-medical-300 mb-3"></i>
-                        <p class="text-medical-600 font-medium">Lade Meditech-AI...</p>
+            <!-- ZWEI KACHELN STATT IFRAME -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                
+                <!-- Kachel 1: Web Assistent -->
+                <div class="bg-white rounded-2xl shadow-lg border border-medical-100 p-8 text-center hover:shadow-xl transition-shadow relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-full h-2 bg-medical-500"></div>
+                    <div class="w-16 h-16 bg-medical-50 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-comment-medical text-3xl text-medical-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-3">Online Assistent</h3>
+                    <p class="text-slate-600 mb-6 leading-relaxed">
+                        Nutzen Sie das Chat-Widget (unten rechts auf dieser Seite), um Termine zu vereinbaren oder Rezepte zu bestellen.
+                    </p>
+                    <div class="inline-block px-4 py-2 bg-medical-50 text-medical-700 rounded-lg text-sm font-medium">
+                        <i class="fa-solid fa-circle text-green-500 text-[10px] mr-2"></i>Jetzt online
                     </div>
                 </div>
-                
-                <iframe 
-                    src="https://meditech-ai.de" 
-                    title="Meditech AI Online Rezeption"
-                    class="w-full h-full border-0"
-                    allow="microphone"
-                ></iframe>
+
+                <!-- Kachel 2: Telefon KI -->
+                <div class="bg-white rounded-2xl shadow-lg border border-medical-100 p-8 text-center hover:shadow-xl transition-shadow relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-full h-2 bg-accent-main"></div>
+                    <div class="w-16 h-16 bg-accent-light rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-phone-volume text-3xl text-accent-main"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-3">KI-Telefonassistent</h3>
+                    <p class="text-slate-600 mb-6 leading-relaxed">
+                        Keine Warteschleife. Unser intelligenter Telefon-Bot nimmt Ihr Anliegen jederzeit persönlich entgegen.
+                    </p>
+                    <a href="tel:022216060006" class="inline-flex items-center px-6 py-3 bg-medical-600 hover:bg-medical-700 text-white font-bold rounded-lg transition-colors">
+                        <i class="fa-solid fa-phone mr-2"></i> 02221 60 60 006
+                    </a>
+                </div>
+
             </div>
             
-            <div class="mt-8 flex justify-center flex-wrap gap-6 text-sm text-slate-500">
-                <div class="flex items-center px-4 py-2 bg-white rounded-full shadow-sm border border-medical-100">
-                    <i class="fa-solid fa-shield-halved text-medical-500 mr-2"></i> Sichere Datenübertragung
-                </div>
-                <div class="flex items-center px-4 py-2 bg-white rounded-full shadow-sm border border-medical-100">
-                    <i class="fa-solid fa-clock text-medical-500 mr-2"></i> 24/7 Erreichbar
-                </div>
-            </div>
+            <p class="mt-8 text-center text-xs text-slate-400 font-mono">[Powered by Meditech-AI]</p>
         </div>
     </section>
 
@@ -323,7 +340,7 @@
             </div>
             
             <div class="mt-10 text-center">
-                <a href="#online-rezeption" onclick="smoothScroll(event, 'online-rezeption')" class="inline-flex items-center text-medical-600 hover:text-medical-800 font-semibold transition-colors cursor-pointer">
+                <a href="javascript:void(0)" onclick="scrollToId('online-rezeption')" class="inline-flex items-center text-medical-600 hover:text-medical-800 font-semibold transition-colors cursor-pointer">
                     Detaillierte Auskunft erhalten Sie über unseren Chatbot <i class="fa-solid fa-arrow-right ml-2"></i>
                 </a>
             </div>
@@ -386,47 +403,46 @@
 
     <!-- SCRIPTS -->
     <script>
-        // Funktion für sanftes Scrollen ohne URL-Änderung (verhindert Wix-Fehler)
-        function smoothScroll(e, targetId) {
-            e.preventDefault(); // Verhindert URL #hash Änderung
-            
+        // Neue, vereinfachte Scroll-Funktion
+        function scrollToId(id) {
             // Sonderfall: 'top' springt ganz nach oben
-            if(targetId === 'top') {
+            if(id === 'top') {
                 window.scrollTo({
                     top: 0,
                     behavior: "smooth"
                 });
             } else {
-                const target = document.getElementById(targetId);
-                if (target) {
-                    // Header Offset berechnen (ca. 80px für die feste Navbar)
-                    const headerOffset = 80;
-                    const elementPosition = target.getBoundingClientRect().top;
-                    const offsetPosition = elementPosition + window.scrollY - headerOffset;
-        
-                    window.scrollTo({
-                        top: offsetPosition,
-                        behavior: "smooth"
-                    });
+                const element = document.getElementById(id);
+                if (element) {
+                    // Nutzt jetzt die native Methode in Verbindung mit scroll-margin-top CSS
+                    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             }
 
             // Menü schließen (falls mobil offen)
-            const menu = document.getElementById('mobile-menu');
-            if (!menu.classList.contains('hidden')) {
-                menu.classList.add('hidden');
-            }
+            toggleMenu();
         }
 
         // Mobile Menu Toggle Funktion
         function toggleMenu() {
             const menu = document.getElementById('mobile-menu');
-            if (menu.classList.contains('hidden')) {
+            if (!menu.classList.contains('hidden')) {
+                menu.classList.add('hidden');
+            }
+        }
+        
+        // Öffnet das Menü (für den Hamburger Button)
+        function openMenu() {
+             const menu = document.getElementById('mobile-menu');
+             if (menu.classList.contains('hidden')) {
                 menu.classList.remove('hidden');
             } else {
                 menu.classList.add('hidden');
             }
         }
     </script>
+    
+    <!-- MEDITECH AI WIDGET -->
+    <script type="module" src="https://vitalyze.meditech-ai.de/auto-guide-widget.js?v=1.0.0&practiceId=b950a1fe-56e5-46f5-9083-00bc62e874e2"></script>
 </body>
 </html>
