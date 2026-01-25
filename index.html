@@ -100,12 +100,24 @@
                     </a>
                 </div>
 
-                <!-- Mobile Menu Button -->
+                <!-- Mobile Menu Button (jetzt mit Funktion) -->
                 <div class="md:hidden flex items-center">
-                    <button class="text-slate-600 hover:text-medical-600 focus:outline-none">
+                    <button onclick="toggleMenu()" class="text-slate-600 hover:text-medical-600 focus:outline-none p-2">
                         <i class="fa-solid fa-bars text-2xl"></i>
                     </button>
                 </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown (Neu hinzugefügt) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 shadow-lg absolute w-full left-0 top-20 z-40">
+            <div class="px-4 pt-4 pb-6 space-y-3 flex flex-col">
+                <a href="#" class="block px-4 py-3 text-base font-medium text-slate-700 hover:text-medical-600 hover:bg-medical-50 rounded-lg transition-colors" onclick="toggleMenu()">Startseite</a>
+                <a href="#team" class="block px-4 py-3 text-base font-medium text-slate-700 hover:text-medical-600 hover:bg-medical-50 rounded-lg transition-colors" onclick="toggleMenu()">Unser Team</a>
+                <a href="#leistungen" class="block px-4 py-3 text-base font-medium text-slate-700 hover:text-medical-600 hover:bg-medical-50 rounded-lg transition-colors" onclick="toggleMenu()">Leistungen</a>
+                <a href="#online-rezeption" class="block px-4 py-3 text-base font-bold text-white bg-medical-600 hover:bg-medical-700 rounded-lg shadow-sm transition-colors text-center mt-2" onclick="toggleMenu()">
+                    <i class="fa-solid fa-robot mr-2"></i> Online Rezeption
+                </a>
             </div>
         </div>
     </nav>
@@ -385,5 +397,16 @@
         </div>
     </footer>
 
+    <!-- Script für das Mobile Menü -->
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+            } else {
+                menu.classList.add('hidden');
+            }
+        }
+    </script>
 </body>
 </html>
