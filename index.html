@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="description" content="Technologiedemonstration: Fiktive Hausarztpraxis mit KI-gestützter Online-Rezeption. Ein Produkt von Gallinger IT.">
     <title>Praxis am Stadtpark | Dr. Weber & Kollegen - Köln</title>
     
     <!-- Tailwind CSS -->
@@ -74,7 +76,7 @@
             <div class="flex space-x-4">
                 <span><i class="fa-regular fa-clock mr-2 text-medical-500"></i> Mo-Fr: 08:00 - 12:00</span>
                 <span class="text-medical-100">|</span>
-                <span>Mo, Di, Do: 15:00 - 18:00</span>
+                <span>Mo, Di: 15:00 - 18:00 | Do: 15:00 - 19:00</span>
             </div>
         </div>
     </div>
@@ -163,7 +165,7 @@
             </div>
         </div>
         <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-            <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="DemoPraxisEmpfang1.jpg" alt="Heller Wartebereich Praxis">
+            <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="DemoPraxisEmpfang1.jpg" alt="Heller Wartebereich Praxis" loading="lazy" width="800" height="600">
         </div>
     </section>
 
@@ -232,7 +234,7 @@
                 <!-- Arzt 1 -->
                 <div class="space-y-4 group">
                     <div class="aspect-w-3 aspect-h-2 rounded-lg overflow-hidden bg-medical-50 shadow-md border border-medical-100">
-                        <img class="object-cover w-full h-64 group-hover:scale-105 transition-transform duration-500" src="DemoPraxisAerztin1.jpg" alt="Dr. med. Julia Sommer">
+                        <img class="object-cover w-full h-64 group-hover:scale-105 transition-transform duration-500" src="DemoPraxisAerztin1.jpg" alt="Dr. med. Julia Sommer" loading="lazy" width="400" height="300">
                     </div>
                     <div class="space-y-2 text-center">
                         <div class="text-lg leading-6 font-medium space-y-1">
@@ -248,7 +250,7 @@
                 <!-- Arzt 2 -->
                 <div class="space-y-4 group">
                     <div class="aspect-w-3 aspect-h-2 rounded-lg overflow-hidden bg-medical-50 shadow-md border border-medical-100">
-                        <img class="object-cover w-full h-64 group-hover:scale-105 transition-transform duration-500" src="DemoPraxisArzt1.jpg" alt="Dr. med. Thomas Weber">
+                        <img class="object-cover w-full h-64 group-hover:scale-105 transition-transform duration-500" src="DemoPraxisArzt1.jpg" alt="Dr. med. Thomas Weber" loading="lazy" width="400" height="300">
                     </div>
                     <div class="space-y-2 text-center">
                         <div class="text-lg leading-6 font-medium space-y-1">
@@ -264,7 +266,7 @@
                 <!-- Arzt 3 -->
                 <div class="space-y-4 group">
                     <div class="aspect-w-3 aspect-h-2 rounded-lg overflow-hidden bg-medical-50 shadow-md border border-medical-100">
-                        <img class="object-cover w-full h-64 group-hover:scale-105 transition-transform duration-500" src="DemoPraxisAerztin2.jpg" alt="Dr. med. Elif Yilmaz">
+                        <img class="object-cover w-full h-64 group-hover:scale-105 transition-transform duration-500" src="DemoPraxisAerztin2.jpg" alt="Dr. med. Elif Yilmaz" loading="lazy" width="400" height="300">
                     </div>
                     <div class="space-y-2 text-center">
                         <div class="text-lg leading-6 font-medium space-y-1">
@@ -339,7 +341,7 @@
         </div>
     </section>
 
-    <!-- FOOTER / KONTAKT (ANGAPASSTES GRID) -->
+    <!-- FOOTER / KONTAKT (ANGEPASSTES GRID) -->
     <!-- Jetzt mit md:grid-cols-4, damit rechts eine leere Spalte für das Widget bleibt -->
     <footer id="kontakt" class="bg-medical-900 text-medical-100">
         <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -392,7 +394,13 @@
             <!-- 4. SPALTE für das schwebende Chat-Widget -->
             <div class="hidden md:block">
                  <h3 class="text-white text-lg font-bold mb-4 border-b border-medical-700 pb-2 inline-block">Online-Rezeption</h3>
-                 <!-- Leerraum für Widget -->
+                 <p class="text-sm text-medical-300 mb-4">Nutzen Sie den Chat-Assistenten unten rechts für:</p>
+                 <ul class="text-sm text-medical-200 space-y-2">
+                     <li><i class="fa-solid fa-calendar-check w-5 text-medical-400"></i> Terminvereinbarung</li>
+                     <li><i class="fa-solid fa-prescription w-5 text-medical-400"></i> Rezeptbestellung</li>
+                     <li><i class="fa-solid fa-file-medical w-5 text-medical-400"></i> Überweisungen</li>
+                     <li><i class="fa-solid fa-circle-question w-5 text-medical-400"></i> Allgemeine Fragen</li>
+                 </ul>
             </div>
         </div>
     </footer>

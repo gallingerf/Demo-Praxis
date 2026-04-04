@@ -1,2 +1,5 @@
 # Demo-Praxis
-Für Webseite Dempraxis um MedicBot zu zeiten
+
+Webseite einer fiktiven Demopraxis, um den MedicBot (KI-Rezeption) zu zeigen.
+
+Live: [praxis-stadtpark-koeln.de](https://praxis-stadtpark-koeln.de)
